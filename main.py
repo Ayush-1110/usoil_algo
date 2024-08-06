@@ -14,8 +14,7 @@ import place_order as place_order
 
 
 # color = True
-color_2 = False
-status = True
+
 
 # if (color_2 == True):
 #     print("Buy", time.ctime())
@@ -37,9 +36,9 @@ while True:
                 asyncio.run(place_order.test_meta_api_synchronization('buy'))
             if(color.one_minute_color == False):
                 asyncio.run(place_order.test_meta_api_synchronization('sell'))
-        if(color.one_minute_color != color_2):
+        if(color.one_minute_color != color.color_2):
             asyncio.run(place_order.test_meta_api_synchronization('close'))
-        status = not status
+        color.status = not color.status
 
 
 

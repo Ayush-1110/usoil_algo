@@ -4,7 +4,7 @@ services:
     type: API
     source:
       repository:
-        url: https://github.com/your-repo/your-python-project
+        url: https://github.com/Ayush-1110/usoil_algo
         branch: main
     components:
       - name: python-component
@@ -15,8 +15,9 @@ services:
             commands:
               - python -m pip install --upgrade pip
               - pip install -r requirements.txt
+              - pip install metaapi_cloud_sdk
           run:
-            command: python your_script.py
+            command: python main.py
     triggers:
       - name: http
         type: HTTP
