@@ -30,7 +30,7 @@ while True:
     if(len(y)>0):
         one_minute.one_minute(y)
         fifteen_minute.fifteen_minute(y)
-    if(color.one_minute_color != status):
+    if(color.one_minute_color != color.status):
         if (color.one_minute_color == color.fifteen_minute_color):
             if(color.one_minute_color == True):
                 asyncio.run(place_order.test_meta_api_synchronization('buy'))
